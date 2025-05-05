@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #faf8ef;
+  background: #f5aeea;
   color: #776e65;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px; }
@@ -90,10 +90,10 @@ h1.title {
     animation-fill-mode: both; }
 
 .score-container:after {
-  content: "Score"; }
+  content: "TULOS"; }
 
 .best-container:after {
-  content: "Best"; }
+  content: "PARAS"; }
 
 p {
   margin-top: 0;
@@ -756,3 +756,16 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; } }
+    .tile {
+      padding: 0 !important;
+      background: none !important;
+    }
+    
+    .tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 !important;
+    }
+    
+    

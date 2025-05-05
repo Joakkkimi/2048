@@ -62,7 +62,20 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  const imageTiles = [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]; // Add more values here if needed
+
+  if (imageTiles.includes(tile.value)) {
+    const img = document.createElement("img");
+    img.src = `tile-${tile.value}.png`; // or .png if your images are PNG
+    img.alt = tile.value;
+    img.style.width = "100%";
+    img.style.height = "100%";
+    img.style.objectFit = "cover";
+    img.style.borderRadius = "8px";
+    inner.appendChild(img);
+  } else {
+    inner.textContent = tile.value;
+  }  
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
